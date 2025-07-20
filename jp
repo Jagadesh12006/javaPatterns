@@ -1,1 +1,184 @@
+# SQUARE FILL PATTERN
 
+import java.util.Scanner;                                                                         
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for(int i = 1; i <= n; i++)
+        {
+            for(int j = 1; j <= n; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+
+Enter the number : 5
+*****
+*****
+*****
+*****
+*****
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# RIGHT HALF PYRAMID PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for(int i = 1; i <= n; i++)
+        {
+            for(int j = 1; j <= i; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+*
+**
+***
+****
+*****
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# REVERSE RIGHT HALF PYRAMID PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for(int i = 1; i <= n; i++)
+        {
+            for(int j = 1; j <= n-i+1; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+*****
+****
+***
+**
+*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# NUMBER INCREASING PYRAMID PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for(int i = 1; i <= n; i++)
+        {
+            for(int j = 1; j <= i; j++)
+            {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+1
+12
+123
+1234
+12345
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# REVERSE NUMBER INCREASING PYRAMID PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for(int i = 1; i <= n; i++)
+        {
+            for(int j = 1; j <= n-i+1; j++)
+            {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+12345
+1234
+123
+12
+1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# RIGHT PASCALS TRIANGLE
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        //UPPER HALF
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //LOWER HALF
+        for(int i=1; i<n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+# OUTPUT:
+Enter the number : 5
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
