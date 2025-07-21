@@ -182,3 +182,238 @@ Enter the number : 5
 **
 *
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# K PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        //UPPER HALF
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n-i+1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //LOWER HALF
+        for(int i=1; i<n; i++){
+            for(int j=1; j<=i+1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+*****
+****
+***
+**
+*
+**
+***
+****
+*****
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ZERO-ONE TRIANGLE PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                if((i+j)%2==0){
+                    System.out.print(1+" ");
+                }
+                else{
+                    System.out.print(0+" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+1 
+0 1 
+1 0 1 
+0 1 0 1 
+1 0 1 0 1 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# SQUARE HALLOW PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= n; j++) {
+                if(i==0 || j==0 || i==n || j==n){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+******
+*    *
+*    *
+*    *
+*    *
+******
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# NUMBER CHANGING PYRAMID PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+        int num=1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num+" ");
+                num++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# LEFT-HALF PYRAMID PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n-i; j++) {
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+    *
+   **
+  ***
+ ****
+*****
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# LEFT PASCALS TRIANGLE
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n-i; j++) {
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i = 1; i < n; i++){
+            for(int j = 1; j <= i; j++){
+                System.out.print(" ");
+            }
+            for(int j = 0; j <= n-i-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+    *
+   **
+  ***
+ ****
+*****
+ ****
+  ***
+   **
+    *
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# REVERSE LEFT-HALF PYRAMID PATTERN
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int n = scan.nextByte();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i-1; j++) {
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= n-i+1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+Enter the number : 5
+*****
+ ****
+  ***
+   **
+    *
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
